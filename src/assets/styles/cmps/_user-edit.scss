@@ -1,0 +1,78 @@
+@use "../setup/variables" as var;
+
+.screen {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: #2c2b2b;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.user-edit {
+  background: white;
+  top: -500px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  position: fixed;
+  align-items: flex-start;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  gap: 0.5rem;
+  border: 1px solid var.$secondary-color;
+  border-radius: 0.25rem;
+  z-index: 2;
+  transition: top ease-in 0.5s;
+  .user-edit-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+  .user-edit-body {
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    form {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 1rem;
+      .form-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+      input {
+        min-width: 300px;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+        border: 1px solid var.$secondary-color;
+      }
+      select {
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+        border: 1px solid var.$secondary-color;
+      }
+      .form-actions {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.modal-open {
+  top: 300px;
+}
+.modal-closed {
+  top: -500px;
+}

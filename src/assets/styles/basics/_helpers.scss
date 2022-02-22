@@ -1,0 +1,32 @@
+@use "../setup/variables" as var;
+
+.primary {
+  background-color: var.$primary-color;
+}
+
+.primary:hover {
+  background-color: var.$primary-color-hover;
+}
+
+.primary-text {
+  color: var.$primary-color;
+}
+
+.primary-text:hover {
+  color: var.$primary-color-hover;
+}
+
+.secondary {
+  background-color: var.$secondary-color;
+}
+
+.secondary:hover {
+  background-color: var.$secondary-color-hover;
+}
+
+.danger-text {
+  color: var.$danger-color;
+}
+.danger-text:hover {
+  color: var.$danger-color-hover;
+}
